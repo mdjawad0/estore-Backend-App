@@ -7,7 +7,7 @@ pipeline {
                 git 'https://github.com/mdjawad0/estore-Backend-App.git'
 
                 // Run Maven Wrapper Commands
-                sh "./mvnw compile"
+                sh "sudo ./mvnw compile"
 
                 echo 'Building the Project with maven compile'
             }
@@ -16,7 +16,7 @@ pipeline {
             steps {
 
                 // Run Maven Wrapper Commands
-                sh "./mvnw test"
+                sh "sudo ./mvnw test"
 
                 echo 'Testing the Project with maven test'
             }
@@ -25,7 +25,7 @@ pipeline {
             steps {
 
                 // Run Maven Wrapper Commands
-                sh "./mvnw package"
+                sh "sudo ./mvnw package"
 
                 echo 'Packaging the Project with maven package'
             }
