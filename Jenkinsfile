@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Get some code from a GitHub repository
-                git 'https://github.com/ishantk/eStoreBackend.git'
+                git 'https://github.com/mdjawad0/estore-Backend-App.git'
 
                 // Run Maven Wrapper Commands
                 sh "./mvnw compile"
