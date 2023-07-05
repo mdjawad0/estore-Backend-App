@@ -6,28 +6,26 @@ pipeline {
                 // Get some code from a GitHub repository
                 git 'https://github.com/mdjawad0/estore-Backend-App.git'
 
-                // Run Maven Wrapper Commands
-                sh "./mvnw compile"
+                // Run Maven Commands
+                sh "mvn compile"
 
-                echo 'Building the Project with maven compile'
+                echo 'Building the Project with Maven compile'
             }
         }
         stage('Test') {
             steps {
+                // Run Maven Commands
+                sh "mvn test"
 
-                // Run Maven Wrapper Commands
-                sh "./mvnw test"
-
-                echo 'Testing the Project with maven test'
+                echo 'Testing the Project with Maven test'
             }
         }
         stage('Package') {
             steps {
+                // Run Maven Commands
+                sh "mvn package"
 
-                // Run Maven Wrapper Commands
-                sh "./mvnw package"
-
-                echo 'Packaging the Project with maven package'
+                echo 'Packaging the Project with Maven package'
             }
         }
     }
