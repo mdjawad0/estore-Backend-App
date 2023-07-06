@@ -8,7 +8,7 @@ public class EStoreBackendApplication {
 	
 	
 	public static void main(String[] args) {
-		System.setProperty("spring.config.location", "application.properties");
+		//System.setProperty("spring.config.location", "application.properties");
 		SpringApplication.run(EStoreBackendApplication.class, args);
 	}
 
